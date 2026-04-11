@@ -17,7 +17,7 @@ function salvarDados() {
 
 
 //  FUNÇÃO PARA CRIAR ITEM
-// (REUTILIZÁVEL - PROFISSIONAL)
+// (REUTILIZÁVEL )
 
 function criarItem(texto) {
 
@@ -26,7 +26,7 @@ function criarItem(texto) {
 
     // cria um span para o texto
     const span = document.createElement("span");
-    span.textContent = texto;
+    span. innerHTML= texto;
 
     // cria botão de remover
     const botaoRemover = document.createElement("button");
@@ -82,7 +82,7 @@ botoes.forEach((btn) => {
 
         const fonte = card.querySelector("h3").textContent;
 
-        const texto = `${nome} escolheu a fonte ${fonte}`;
+        const texto = `${nome} escolheu a fonte <strong>${fonte}</strong>`;
 
         // cria item na tela
         criarItem(texto);
@@ -107,6 +107,6 @@ const mensagemCodificada = encodeURIComponent(mensagem);
 
 const link = "https://wa.me/5589999742605?text=" + mensagemCodificada;
 
-window.location.href = link;
+window.open(link, "_blank");
     });
 });
