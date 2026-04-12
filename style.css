@@ -248,6 +248,56 @@ footer {
     font-size: 24px;
 }
 
+/*botoes de ver mais e de voltar*/
+.navegacao  {
+   
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px; /* dá espaço da borda esquerda */
+}
+
+
+.navegacao a {
+    background-color: #25D366; /* verde estilo WhatsApp */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+.ver-mais {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px; /* dá espaço da borda esquerda */
+}
+
+.ver-mais a {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ver-mais a:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+
 @media (max-width: 480px) {
     .botao-fixo a {
         padding: 10px;
@@ -256,6 +306,10 @@ footer {
     .botao-fixo i {
         font-size: 24px;
         bottom: 60px;
+    }
+
+    .ver-mais {
+        justify-content: center;
     }
 }
 
