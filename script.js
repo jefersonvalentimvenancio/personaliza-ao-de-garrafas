@@ -105,7 +105,7 @@ Fonte: ${fonte}`;
 
 const mensagemCodificada = encodeURIComponent(mensagem);
 
-const link = "https://wa.me/5589999742605?text=" + mensagemCodificada;
+const link = "https://wa.me/5589988265400?text=" + mensagemCodificada;
 
 window.open(link, "_blank");
     });
