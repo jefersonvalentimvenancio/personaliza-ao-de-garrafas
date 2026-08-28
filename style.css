@@ -137,8 +137,10 @@ form button:hover {
 .lista li {
     display: flex;
     align-items: center;
-    gap: 8px; /* controla a distância entre texto e botão */
-    background: #f9fafb;
+    justify-content: space-between;
+    gap: 10px; 
+    background: #141414;
+    border: 1px solid #222222;
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -147,37 +149,38 @@ form button:hover {
 .lista li span {
   
     font-size: 14px;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 
 /*botao de remover*/
 .btn-remover {
-    background-color: #f3040497;
-    color: white;
+    background-color: #ff3333;
+    color: #FFFFFF;
     border: none;
-
     width: 28px;
     height: 28px;
-
     cursor: pointer;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 14px;
     font-weight: bold;
-
     transition: 0.2s;
+    transition: 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
 }
 
 
 
 /* Resumo */
 section {
-    padding: 30px 20px;
+    padding: 20px;
 }
 
 .resumo {
@@ -191,15 +194,15 @@ section {
 
 footer {
     margin-top: auto;
-    padding: 25px 15px;
-    background: #111827;
-    color: white;
+    padding: 30px 20px;
+    background: #141414;
+    border-top: 1px solid #222222;
+    color: #B8B8B8;
     font-size: 14px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .copy {
@@ -211,6 +214,9 @@ footer {
     gap: 20px;
 }
 
+.redes-sociais a {
+    text-decoration: none;
+}
 
 .fa-square-instagram{
     color: #FC0AD9;
@@ -222,30 +228,7 @@ footer {
     font-size: 25px;
 }
 
-.extra {
-    text-align: center;
-    margin: 40px 20px;
-}
 
-.extra p {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.extra a {
-    display: inline-block;
-    background: #25d366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.extra a:hover {
-    transform: scale(1.05);
-}
 
 /*botao do whatssap fixo*/
 .botao-fixo {
@@ -258,81 +241,68 @@ footer {
 .botao-fixo a {
     background-color: #25d366;
     padding: 12px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(37, 211, 102,0.4);
+    transition: transform 0.3s ease;
 }
 
 .botao-fixo i {
-    color: rgba(0, 0, 0, 0.29);
+    color: #ffffff;
     font-size: 24px;
 }
 
 /*botoes de ver mais e de voltar*/
-.navegacao  {
-   
+.ver-mais, .navegacao  {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     max-width: 1200px;
-    margin: 20px auto;
-    padding-left: 20px; /* dá espaço da borda esquerda */
+    margin: 20px auto 40px;
+    padding-left: 20px; 
 }
 
 
-.navegacao a {
-    background-color: #25D366; /* verde estilo WhatsApp */
-    color: white;
+ .ver-mais a, .navegacao a{
+
+    background-color: transparent; /* verde estilo WhatsApp */
+    color: #FFD000;
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     transition: 0.3s;
 }
 
-.navegacao a:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
-}
-
-.ver-mais {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding-left: 20px; /* dá espaço da borda esquerda */
-}
-
-.ver-mais a {
-    background-color: #25D366;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.ver-mais a:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
+.navegacao a:hover .ver-mais a:hover {
+    background-color: #FFD000;
+    color: #080808;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 208, 0, 0.2);
 }
 
 
-@media (max-width: 480px) {
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .botao-fixo {
+        bottom: 20px;
+        right: 20px;
+    }
+
     .botao-fixo a {
-        padding: 10px;
+        width: 45px;
+        height: 45px;
     }
 
     .botao-fixo i {
         font-size: 24px;
-        bottom: 60px;
-    }
-
-    .ver-mais {
-        justify-content: center;
     }
 }
-
